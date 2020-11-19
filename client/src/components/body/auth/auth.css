@@ -1,0 +1,105 @@
+.login__page {
+  max-width: 500px;
+  margin: auto;
+  color: #444;
+  padding: 0 15px;
+}
+
+.login__page h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 20px 0;
+  letter-spacing: 1.5px;
+}
+
+.login__page input {
+  width: 100%;
+  height: 45px;
+  margin: 10px 0;
+  border: 2px solid #777;
+  outline: none;
+  padding: 0 10px;
+}
+
+.login__page .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  align-items: flex-start;
+}
+
+.login__page .row a{
+  color: crimson;
+}
+
+.login__page .row button {
+  width: 150px;
+  padding: 10px 0;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-right: 10px;
+}
+
+.login__page p {
+  margin: 10px 0;
+}
+
+.login__page a {
+  color: #111;
+  font-weight: 600;
+}
+
+/* ----- Forgot password ----- */
+.forgot_pass {
+  color: #555;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0;
+  letter-spacing: 1.3px;
+}
+
+.forgot_pass .row {
+  max-width: 500px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.forgot_pass .row input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+.forgot_pass .row button {
+  background: #333;
+  color: white;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+/* ----- Social network account ----- */
+.login_page .hr{
+  margin: 15px 0;
+  color: crimson;
+}
+
+.login_page .social div button{
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: capitalize;
+  letter-spacing: 1.3px;
+  box-shadow: 0 2px 4px #777;
+}
