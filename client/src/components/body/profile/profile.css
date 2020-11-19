@@ -157,7 +157,7 @@
 
 
 /* -------------- Edit User ----------------- */
-/* .edit_user .go_back {
+.edit_user .go_back {
   background: white;
   margin: 20px;
   font-size: 1.2rem;
@@ -181,4 +181,4 @@
 .edit_user .col-left #isAdmin + label {
   display: inline-block;
   margin-left: 5px;
-} */
+}

@@ -95,7 +95,7 @@ function Profile() {
     }
   }
 
-  const updateAvatar = async(e) => {
+  const updateAvatar = async (e) => {
     e.preventDefault()
     try {
       const file = e.target.files[0]
@@ -125,6 +125,27 @@ function Profile() {
     }
     catch (err) {
       setData({...data, err: err.response.data.msg, success: ''})
+    }
+  }
+
+  const handleDelete = async (id) => {
+    try {
+      if (user._id !== id) {
+        if (window.confirm("Are you sure you want to delete this account?")) {
+          setLoading(true)
+          await axios.delete(`/user/delete/${id}`, {
+            headers: { Authorization: token }
+          })
+          setLoading(false)
+          setCallback(!callback)
+        }
+      }
+      else {
+        window.alert("You can't delete current admin account.")
+      }
+    }
+    catch (err) {
+
     }
   }
 
@@ -192,7 +213,7 @@ function Profile() {
             </thead>
             <tbody>
               {
-                users.map(user => {
+                users.map(user => (
                   <tr key={user._id}>
                     <td>{user._id}</td>
                     <td>{user.name}</td>
@@ -208,10 +229,10 @@ function Profile() {
                       <Link to={`/edit_user/${user._id}`}>
                         <i className="fas fa-edit" title="Edit"></i>
                       </Link>
-                      <i className="fas fa-trash-alt" title="Remove"></i>
+                      <i className="fas fa-trash-alt" title="Remove" onClick={() => handleDelete(user._id)}></i>
                     </td>
                   </tr>
-                })
+                ))
               }
             </tbody>
           </table>
