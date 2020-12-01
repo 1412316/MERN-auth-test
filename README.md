@@ -8,3 +8,6 @@ express mongoose dotenv cors cookie-parser bcrypt jsonwebtoken cloudinary expres
 
 ### package install for package.json
 concurrently
+
+### Demo heroku:
+My demo: [link](https://test-mern-auth-1412316.herokuapp.com/)
